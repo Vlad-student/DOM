@@ -1,4 +1,4 @@
-.heading{
+/* .heading{
     color : pink;
     background-color: rgb(31, 44, 44);
 }
@@ -6,4 +6,19 @@
 .textset{
     font-size: 24px;
     
+} */
+body{
+    margin: auto;
+}
+.content{
+    width: 200px;
+    height: 100px;
+    background-color:rgb(191, 191, 109) ; 
+}
+.small{
+    height: 100px;
+    width: 100px;
+}
+.big{
+
 }
