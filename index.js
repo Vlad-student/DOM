@@ -1,13 +1,21 @@
-const buttons = document.querySelectorAll('button');
-console.dir(buttons)
+const root = document.getElementById('root');
+console.dir(root)
 
-for (const btn of buttons) {
-//    console.dir(btn.classList)
-btn.classList.add('qwe','sdf','hgsdf') 
-btn.addEventListener('mouseover', ()=>{
-   btn.classList.add('active') 
+const h1 = document.createElement('h1');
+h1.textContent = ' i create h1';
+h1.classList.add('heading');
+h1.addEventListener('click', ()=>{
+    h1.style.color = 'red'
 })
-btn.addEventListener('mouseout', ()=>{
-    btn.classList.remove('active')
-})
-}
+console.dir(h1);
+console.log(h1);
+
+const btn = document.createElement('button');
+btn.textContent = 'click me'
+
+const em = document.createElement('em');
+em.textContent ='!!!!'
+
+h1.append(em);
+
+root.append(btn, h1)
