@@ -1,49 +1,45 @@
-const products = [
-    { name: "Яблука", category: "Фрукти", price: 40 },
-    { name: "Хліб", category: "Випічка", price: 25 },
-    { name: "Молоко", category: "Молочні продукти", price: 30 },
-    { name: "Курячі грудки", category: "М'ясо", price: 120 },
-    { name: "Картопля", category: "Овочі", price: 20 },
-    { name: "Помідори", category: "Овочі", price: 50 },
-    { name: "Сир", category: "Молочні продукти", price: 80 },
-    { name: "Яйця", category: "Молочні продукти", price: 35 },
-    { name: "Макарони", category: "Бакалія", price: 45 },
-    { name: "Чай", category: "Напої", price: 60 },
-    { name: "Шоколад", category: "Солодощі", price: 70 },
-    { name: "Сік апельсиновий", category: "Напої", price: 55 },
-    { name: "Банани", category: "Фрукти", price: 65 },
-    { name: "Рис", category: "Бакалія", price: 50 },
-    { name: "Огірки", category: "Овочі", price: 30 }
-];
+const root = document.getElementById('root');
+// const btnSubscribe = document.createElement('button');
+// btnSubscribe.textContent ='Subscribe now'
+// root.append(btnSubscribe)
+
+// // відтермінований запуск коду setTimeout(функція, час у мілі секундах)
+// setTimeout (() => {
+//     const subscribe = document.createElement('div');
+//     subscribe.classList.add('subscribe')
+//     const close = document.createElement('span');
+//     close.textContent  = 'X';
+//     close.addEventListener('click', () =>{
+//         document.querySelector('.subscribe').remove();
+//     })
+//     const h2 = document.createElement('h2');
+//     h2.textContent = ' Subscribe to our email newsletter';
+//     const form = document.createElement('form');
+//     form.className = 'subscribe-form';
+//     const input = document.createElement('input');
+//     const button = document.createElement('button');
+//     button.textContent = 'Subcribe';
+//     subscribe.append(close,h2,form);
+//     form.append(input,button);
+//     root.append(subscribe);
+    
+// }, 5000);
 
 
-const section = document.createElement('section');
-const cards = products.map((product)=>createCard(product));
-section.append(...cards);
-root.append(section)
+// btnSubscribe.addEventListener('click', () => {
+//     clearTimeout(idTimeout)
+// })
+
+// викликає код з певним інтервалом setInterval (функція, час у мілісекундах)
+let count = 0;
+const idInterval = setInterval(() => {
+    console.log(count);
+    count++;
+    if (count>10) {
+        clearInterval(idInterval)
+    }
+}, 1000);
 
 
-function createCard(product){
-const {name,category,price} = product;
-const article = document.createElement('article');
-article.classList.add('product');
-
-const h2 = document.createElement('h2');
-h2.classList.add('product-name');
-h2.textContent = name;
-
-const h3 = document.createElement('h3');
-h3.classList.add('product-category');
-h3.textContent = category;
-
-const p = document.createElement('p');
-p.classList.add('product-price');
-p.textContent = price;
-
-const btn = document.createElement('button');
-btn.classList.add('product-addtocart');
-btn.textContent = 'add to cart';
-
-article.append(h2,h3,p,btn)
-    return article;
-}
+console.log('start');
+set
